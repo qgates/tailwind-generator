@@ -1,0 +1,4 @@
+# Ignore lmwright style files as they're only here for reference
+src/styles.lmw.css
+src/tailwind.lmw.js
+node_modules/
