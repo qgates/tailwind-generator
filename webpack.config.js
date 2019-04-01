@@ -1,7 +1,9 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
+// modify these two vars to determine the output from npm run watch
 var output_watch_path = '../public_html/wp-content/themes/cwc';
 var output_css_filename = 'twstyle.css'
 
@@ -65,7 +67,22 @@ if (process.env.NODE_ENV == 'watch') {
         filename: 'index.html',
         template: 'src/index.html',
       }),
+      // new OptimizeCssAssetsPlugin...
     ],
+  }
+  
+  // add OptimizeCssAssetsPlugin into the processing chain if we're in production
+  if (process.env.NODE_ENV === 'production') {
+    module.exports.plugins.push(
+      new OptimizeCssAssetsPlugin({
+        disable: process.env.NODE_ENV === 'development',
+        cssProcessor: require('cssnano'),
+        cssProcessorPluginOptions: {
+          preset: ['default', { discardComments: { removeAll: true } }],
+        },
+        canPrint: true
+      })
+    );
   }
 }
 
