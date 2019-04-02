@@ -2,3 +2,4 @@
 src/styles.lmw.css
 src/tailwind.lmw.js
 node_modules/
+localconfig.js

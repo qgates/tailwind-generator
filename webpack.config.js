@@ -2,10 +2,11 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const output = require('./localconfig.js')
 
 // modify these two vars to determine the output from npm run watch
-var output_watch_path = '../public_html/wp-content/themes/cwc';
-var output_css_filename = 'twstyle.css'
+var output_watch_path = output.path;
+var output_css_filename = output.file;
 
 if (process.env.NODE_ENV == 'watch') {
   process.env.NODE_ENV = 'development';

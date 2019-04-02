@@ -16,7 +16,15 @@ Source files for processing reside in src/ (tailwind.js and styles.css). This ge
 
 ## Configuration
 
-- Modify webpack.config.js vars at top of file to specify the correct tailwind output path and filename (default twstyle.css)
+- output for npm run watch is configured in `localconfig.js` which needs to be created. Path specified within is relative to the package root. A sample config is contained in the file sample-localconfig.js:
+
+```
+// output path and filename for npm run watch go here...
+module.exports = {
+  path: "../public_html/css/",
+  file: "twstyle.css"
+};
+```
 - For a fresh tailwind.js config, cd src/ and run npx init tailwind (overwrites existing!)
 
 ## Using
