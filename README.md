@@ -12,7 +12,7 @@ To get started, clone the project somewhere inside your project root, cd into it
 npm install
 ```
 
-Source files for processing reside in src/ (tailwind.js and styles.css). The generator will use them to generate the output css.
+Source files for processing reside in src/ (`tailwind.js` and `styles.css`). You'll want to modify these files; the generator will use them to generate the output css.
 
 ## Configuration
 
@@ -25,11 +25,13 @@ module.exports = {
   file: "twstyle.css"
 };
 ```
-- For a fresh tailwind.js config, cd src/ and run npx init tailwind (overwrites existing!)
+- files `index.html` and `styles.css` in src/ are the same as those provided in <a href="https://github.com/tailwindcss/webpack-starter">Tailwind CSS Webpack Starter</a>.
+- for a fresh tailwind.js config, in the src/ folder delete `tailwind.js` and, from that folder, run `npx init tailwind`
+- 
 
 ## Using
 
-Main usecase is css generation in the desired output directory. The following command in a console will live-monitor files in src/ (styles.css and tailwind.js) and generate the output css when they  are modified
+Main usecase is css generation in the desired output directory. The following command in a console will live-monitor files in src/ (styles.css and tailwind.js) and generate the output css when they are modified
 
 ```
 npm run watch
