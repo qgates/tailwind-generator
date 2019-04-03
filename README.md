@@ -1,4 +1,4 @@
-# Standalone Node-Tailwind generator for local webdev
+# Standalone Nodejs-Webpack-Tailwind generator
 
 Based on a hacked version of 'Tailwind CSS Webpack Starter Project' available on <a href="https://github.com/tailwindcss/webpack-starter">here on github</a>.
 
@@ -12,7 +12,7 @@ To get started, clone the project somewhere inside your project root, cd into it
 npm install
 ```
 
-Source files for processing reside in src/ (tailwind.js and styles.css). This generator will use them to generate the output css.
+Source files for processing reside in src/ (tailwind.js and styles.css). The generator will use them to generate the output css.
 
 ## Configuration
 
@@ -43,17 +43,15 @@ npm run dev
 
 ```
 
-Finally, we can generate our CSS along with the webpack stub main.js and processed index.html in the dist/ folder by running
+Finally, we can generate optimised and minified CSS along with the webpack stub main.js and processed index.html in the dist/ folder by running
 
 ```
 npm run prod
 
 ```
 
-This project is a hacked version of 'Tailwind CSS Webpack Starter Project' available <a href="https://github.com/tailwindcss/webpack-starter">here on github</a>.
+## Thanks and Contributing
 
-## To do and contributing
-
-Plan to evolve `npm run prod` to optimize \ minimize the CSS using cssnano
+This tool is a hack of 'Tailwind CSS Webpack Starter Project' available <a href="https://github.com/tailwindcss/webpack-starter">here on github</a>. Thanks to Adam Wathan and the contributors on that project.
 
 If you have experience with Webpack and suggestions on how this generator could be improved PR's are welcome.
