@@ -16,7 +16,7 @@ Source files for processing reside in src/ (`tailwind.js` and `styles.css`). You
 
 ## Configuration
 
-- output for npm run watch is configured in `localconfig.js` which needs to be created. Path specified within is relative to the package root. A sample config is contained in the file sample-localconfig.js:
+- output for npm run watch is configured in `localconfig.js` which needs to be created. Path specified within is relative to the package root. A sample config is contained in the file `sample-localconfig.js`:
 
 ```
 // output path and filename for npm run watch go here...
@@ -27,7 +27,6 @@ module.exports = {
 ```
 - files `index.html` and `styles.css` in src/ are the same as those provided in <a href="https://github.com/tailwindcss/webpack-starter">Tailwind CSS Webpack Starter</a>.
 - for a fresh tailwind.js config, in the src/ folder delete `tailwind.js` and, from that folder, run `npx init tailwind`
-- 
 
 ## Using
 
